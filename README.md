@@ -21,9 +21,9 @@ Automatização do encerramento de instâncias EC2 usando AWS Lambda, IAM e Even
 
 ## 🧱 Arquitetura da Solução
 
-> *(Adicione esta imagem na pasta `docs/` com o nome `arquitetura.png`)*
-
-![Arquitetura da Solução](docs/arquitetura.png)
+![Arquitetura da Solução](docs/policy_body.png)
+![função do IAM](docs/role_terminate_ec2-created.png)
+![função do Lambda](docs/lambda_created.png)
 
 ---
 
