@@ -53,6 +53,12 @@ Automatização do encerramento de instâncias EC2 usando AWS Lambda, IAM e Even
 
 ---
 
+- `lambda/Terminator.py`: Script que realiza a finalização das instâncias.
+- `policy/politica_terminar_ec2.json`: Política IAM em formato JSON.
+- `docs/`: Espaço para diagramas, imagens ou documentações complementares.
+
+---
+
 ## 🧹 Limpeza de Recursos
 
 Para evitar custos:
@@ -64,5 +70,7 @@ Para evitar custos:
 ---
 
 ## ✍️ Autor
+
+### Adriano Costa
 
 Este projeto foi desenvolvido como parte de estudos práticos em automação de infraestrutura com foco em ambientes cloud utilizando AWS durante o curso de **AWS Cloud Developer na Escola da Nuvem**.
