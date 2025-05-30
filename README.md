@@ -1,76 +1,68 @@
-# Automação do Encerramento de Instâncias EC2 com AWS Lambda e EventBridge
+# 🚀 Automação do Encerramento de Instâncias EC2 com AWS Lambda e EventBridge
 
-Este projeto tem como objetivo demonstrar a criação de uma solução automatizada para encerramento de instâncias EC2 na AWS utilizando **Lambda Functions**, **IAM Policies** e **Amazon EventBridge**.
+Este projeto apresenta uma solução automatizada para encerrar instâncias EC2 na AWS, utilizando **AWS Lambda**, **IAM Policies** e **Amazon EventBridge**. Ideal para ambientes que demandam controle de custos ou desligamento automático de recursos não utilizados.
 
-## 🚀 Funcionalidades
+---
 
-- Criação de uma política personalizada do IAM para término de instâncias EC2.
-- Implementação de uma função Lambda em Python.
-- Associação da política IAM à função Lambda.
-- Agendamento automático da execução via Amazon EventBridge.
-- Eliminação segura de recursos após uso.
+## 📌 Descrição
 
-## 🧱 Arquitetura
+Automatização do encerramento de instâncias EC2 usando AWS Lambda, IAM e EventBridge. Projeto com foco em práticas de automação na nuvem.
 
-A arquitetura da solução envolve os seguintes componentes:
+---
 
-- **IAM Policy**: Permite à função Lambda acessar e encerrar instâncias EC2.
-- **Lambda Function**: Código em Python que identifica e encerra instâncias.
-- **EventBridge**: Responsável por acionar a função Lambda periodicamente.
+## 🧠 Funcionalidades
 
-## 📂 Estrutura
+- 🔐 Criação de uma política IAM personalizada.
+- 🧬 Implementação de função Lambda com Python.
+- ⚙️ Agendamento via Amazon EventBridge.
+- 🧹 Remoção segura dos recursos após uso.
 
+---
 
-automatizacao-termino-instancias-aws
+## 🧱 Arquitetura da Solução
 
-│
+> *(Adicione esta imagem na pasta `docs/` com o nome `arquitetura.png`)*
 
+![Arquitetura da Solução](docs/arquitetura.png)
 
-├── README.md
+---
 
-├── lambda
+## 📁 Estrutura do Projeto
 
-│   └── Terminator.py
+```plaintext
+📦 automatizacao-termino-instancias-aws
+├── 📄 README.md
+├── 📁 lambda
+│   └── 🐍 Terminator.py
+├── 📁 policy
+│   └── 📄 politica_terminar_ec2.json
+├── 📁 docs
+│   └── 🖼️ arquitetura.png
+└── 📄 .gitignore
+```
 
-├── policy
+---
 
-│   └── politica_terminar_ec2.json
+## 🛠️ Como Utilizar
 
-├── docs
+1. Crie a **política IAM** (`policy/politica_terminar_ec2.json`).
+2. Crie a **função Lambda** com a role associada.
+3. Faça upload do script `lambda/Terminator.py`.
+4. Configure um **gatilho no EventBridge** com expressão `rate(12 hours)` ou `rate(5 minutes)`.
+5. Monitore e teste com uma instância EC2 ativa.
 
-│   └── diagramas.png (ilustrações opcionais)
+---
 
-├── .gitignore
+## 🧹 Limpeza de Recursos
 
-└── LICENSE (opcional)
+Para evitar custos:
 
+- Exclua a função Lambda
+- Remova a role e a política do IAM
+- Apague a regra do EventBridge
 
+---
 
+## ✍️ Autor
 
-- `lambda/Terminator.py`: Script que realiza a finalização das instâncias.
-- `policy/politica_terminar_ec2.json`: Política IAM em formato JSON.
-- `docs/`: Espaço para diagramas, imagens ou documentações complementares.
-
-## 🛠️ Como utilizar
-
-1. Crie a política do IAM utilizando o arquivo JSON disponível em `policy/`.
-2. Crie a função Lambda com a role associada à política criada.
-3. Faça o upload do código `Terminator.py` na função Lambda.
-4. Programe a execução usando EventBridge com expressões cron ou rate.
-5. Teste a execução criando instâncias EC2 e aguardando o término automático.
-
-## 🧹 Limpeza dos recursos
-
-Para evitar custos, exclua os seguintes recursos após uso:
-- Função Lambda
-- Role do IAM
-- Política IAM
-- Regra do EventBridge
-
-## 📝 Autor: 
-### Adriano Costa 
-
-Este projeto foi desenvolvido como parte de estudos de automação em ambientes cloud com AWS.
-
-
-
+Este projeto foi desenvolvido como parte de estudos práticos em automação de infraestrutura com foco em ambientes cloud utilizando AWS durante o curso de **AWS Cloud Developer na Escola da Nuvem**.
