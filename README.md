@@ -1,6 +1,4 @@
-# 🚀 Automação do Encerramento de Instâncias EC2 com AWS Lambda e EventBridge
-
-Este projeto apresenta uma solução automatizada para encerrar instâncias EC2 na AWS, utilizando **AWS Lambda**, **IAM Policies** e **Amazon EventBridge**. Ideal para ambientes que demandam controle de custos ou desligamento automático de recursos não utilizados.
+![INÍCIO](docs/capa.png)
 
 ---
 
